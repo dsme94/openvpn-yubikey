@@ -14,7 +14,7 @@ def parse_cmdline(argv):
 def get_conn_index(conn_name):
     pref_dir = '/Users/%s/Library/Application Support/Viscosity/OpenVPN' % os.environ['USER']
     for index_dir in os.listdir(pref_dir):
-        if not os.path.isdir(index_dir):
+        if not os.path.isdir(os.path.join(pref_dir, index_dir)):
             continue
         conf = os.path.join(pref_dir, index_dir, 'config.conf')
         for line in open(conf, 'rb').readlines():
