@@ -33,7 +33,7 @@ if conn_state is "Connecting" then
   -- Get the YubiKey token and pass along to the python script to insert into keychain.
   display dialog "Tap your YubiKey to generate an OTP" default answer ""
   set yubi_token to text returned of result
-  do shell script "/Users/" & username & "/Library/Application\\ Support/Viscosity/viscosity-connect-script.py '" & conn_state & "' '" & conn_name & "' '" & yubi_token & "'"
+  do shell script "python /Users/" & username & "/Library/Application\\ Support/Viscosity/viscosity-connect-script.py '" & conn_state & "' '" & conn_name & "' '" & yubi_token & "'"
   display notification "Updated keychain password for " & username & "@" & conn_name
 else
   -- Pass info to the python script to reset the password in the keychain.
