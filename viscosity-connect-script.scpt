@@ -37,7 +37,7 @@ if conn_state is "Connecting" then
   display notification "Updated keychain password for " & username & "@" & conn_name
 else
   -- Pass info to the python script to reset the password in the keychain.
-  do shell script "/Users/" & username & "/Library/Application\\ Support/Viscosity/viscosity-connect-script.py '" & conn_state & "' '" & conn_name & "'"
+  do shell script "python /Users/" & username & "/Library/Application\\ Support/Viscosity/viscosity-connect-script.py '" & conn_state & "' '" & conn_name & "'"
   display notification "Reset keychain password for " & username & "@" & conn_name
 end if
 
