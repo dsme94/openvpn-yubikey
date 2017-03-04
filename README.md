@@ -1,2 +1,2 @@
-# viscosity-yubikey
-Viscosity "Before Connect" script for VPN login with YubiKey 2FA
+# openvpn-yubikey
+Viscosity and Tunnelblick scripts for OpenVPN login with YubiKey 2FA
